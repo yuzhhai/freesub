@@ -6,9 +6,9 @@ log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   type: vless
-  server: 60.248.219.78
+  server: 60.248.219.54
   port: 443
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
   udp: true
   tls: true
   skip-cert-verify: true
@@ -17,29 +17,8 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: ty986gfazs.cainiaohub.xyz
+      Host: 60.248.219.54
 - name: 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
-  type: ss
-  server: 36.224.178.15
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-- name: 🇬🇧 英国 (United Kingdom) 03 (家宽) - xiaohe
-  type: vless
-  server: 162.159.153.4
-  port: 443
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rayan-007.maxima.dpdns.org
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.maxima.dpdns.org
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
   type: vless
   server: hinet1.2yly.com
   port: 24215
@@ -51,20 +30,6 @@ proxies:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 05 (家宽) - xiaohe
-  type: vless
-  server: 172.67.133.170
-  port: 443
-  uuid: 7c6a566b-4c4a-b8f2-1719-a3096b424141
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: peekconfigg.vipserver1-39d.workers.dev
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: peekconfigg.vipserver1-39d.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -72,9 +37,6 @@ proxy-groups:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 03 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
-  - 🇺🇸 美国 (United States) 05 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -82,8 +44,5 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 03 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
-  - 🇺🇸 美国 (United States) 05 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
