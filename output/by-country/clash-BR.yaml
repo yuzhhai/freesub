@@ -14,12 +14,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: aksai.org
+  servername: ''
   network: ws
   ws-opts:
     path: /linkvws
     headers:
-      Host: aksai.org
+      Host: ''
 - name: 🇧🇷 BR 02 - xiaohe
   type: vmess
   server: 89.39.161.157
