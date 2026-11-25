@@ -18,7 +18,7 @@ proxies:
   ws-opts:
     path: /vmess/
     headers:
-      Host: 38.107.234.57
+      Host: ''
 - name: 🇰🇿 KZ 02 - xiaohe
   type: vless
   server: 38.107.234.57
