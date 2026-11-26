@@ -4,31 +4,26 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 ID 01 - xiaohe
+- name: 🇮🇷 IR 01 - xiaohe
   type: vless
-  server: 162.159.130.234
-  port: 2083
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  server: ns2.irts.lol
+  port: 443
+  uuid: ff1906a5-a446-44e4-8e72-4e2d61775fa0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: vp14.1145678.xyz
-  network: ws
-  ws-opts:
-    path: /community/redirect.html
-    headers:
-      Host: vp14.1145678.xyz
+  servername: ns2.irts.lol
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇩 ID 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩 ID 01 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
 rules:
 - MATCH,PROXIES
